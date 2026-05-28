@@ -37,7 +37,7 @@ export function Resume({ lang }: { lang: Language }) {
             <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
               <span className="px-4 py-1.5 bg-slate-100/80 hover:bg-slate-200/80 transition-colors text-slate-700 text-xs sm:text-sm font-semibold rounded-full border border-slate-200">{lang === 'ID' ? 'Pengalaman Beragam' : 'Diverse Experience'}</span>
               <span className="px-4 py-1.5 bg-slate-100/80 hover:bg-slate-200/80 transition-colors text-slate-700 text-xs sm:text-sm font-semibold rounded-full border border-slate-200">Core Stack: Fullstack, AI, ERP, Logistics</span>
-              <span className="px-4 py-1.5 bg-indigo-50 hover:bg-indigo-100 transition-colors text-indigo-700 text-xs sm:text-sm font-semibold rounded-full border border-indigo-100">{lang === 'ID' ? 'Profesional Teknologi' : 'Tech Professional'}</span>
+              <span className="px-4 py-1.5 bg-blue-50 hover:bg-blue-100 transition-colors text-blue-700 text-xs sm:text-sm font-semibold rounded-full border border-blue-100">{lang === 'ID' ? 'Profesional Teknologi' : 'Tech Professional'}</span>
             </div>
           </div>
         </motion.div>
@@ -62,7 +62,7 @@ export function Resume({ lang }: { lang: Language }) {
                 <div className="hidden md:block absolute left-[153px] top-1.5 w-[16px] h-[16px] bg-slate-800 rounded-full border-4 border-white shadow-sm z-10 transition-transform group-hover:scale-125"></div>
                 
                 {/* Date */}
-                <div className="pl-6 md:pl-0 text-xs font-bold text-indigo-600 md:text-slate-400 md:w-[160px] md:pr-10 md:text-right shrink-0 pt-1 mb-2 md:mb-0 uppercase tracking-wider">
+                <div className="pl-6 md:pl-0 text-xs font-bold text-blue-600 md:text-slate-400 md:w-[160px] md:pr-10 md:text-right shrink-0 pt-1 mb-2 md:mb-0 uppercase tracking-wider">
                   Agu 2023 - {lang === 'ID' ? 'Saat Ini' : 'Present'}
                 </div>
                 
@@ -84,8 +84,8 @@ export function Resume({ lang }: { lang: Language }) {
               </div>
 
               <div className="relative flex flex-col md:flex-row group pb-10">
-                <div className="md:hidden absolute left-[3px] top-1.5 w-[10px] h-[10px] bg-indigo-500 rounded-full border-[3px] box-content border-white shadow-sm z-10"></div>
-                <div className="hidden md:block absolute left-[153px] top-1.5 w-[16px] h-[16px] bg-indigo-500 rounded-full border-4 border-white shadow-sm z-10 transition-transform group-hover:scale-125"></div>
+                <div className="md:hidden absolute left-[3px] top-1.5 w-[10px] h-[10px] bg-blue-500 rounded-full border-[3px] box-content border-white shadow-sm z-10"></div>
+                <div className="hidden md:block absolute left-[153px] top-1.5 w-[16px] h-[16px] bg-blue-500 rounded-full border-4 border-white shadow-sm z-10 transition-transform group-hover:scale-125"></div>
                 
                 <div className="pl-6 md:pl-0 text-xs font-bold text-slate-500 md:text-slate-400 md:w-[160px] md:pr-10 md:text-right shrink-0 pt-1 mb-2 md:mb-0 uppercase tracking-wider">
                   Jul 2021 - Jul 2023
@@ -94,7 +94,7 @@ export function Resume({ lang }: { lang: Language }) {
                 <div className="pl-6 md:pl-10 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
                     <h3 className="text-xl font-bold text-slate-800">Warehouse Administrator</h3>
-                    <div className="text-base font-black text-slate-900 flex items-center mt-1 sm:mt-0 italic"><Building2 size={16} className="mr-2 text-indigo-600"/> Billstone</div>
+                    <div className="text-base font-black text-slate-900 flex items-center mt-1 sm:mt-0 italic"><Building2 size={16} className="mr-2 text-blue-600"/> Billstone</div>
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Jakarta Raya, Indonesia</p>
                   <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
@@ -189,8 +189,8 @@ export function Resume({ lang }: { lang: Language }) {
               <div className="hidden md:block absolute left-[160px] top-2 bottom-0 w-[2px] bg-slate-100"></div>
               
               <div className="relative flex flex-col md:flex-row group pb-10">
-                <div className="md:hidden absolute left-[3px] top-1.5 w-[10px] h-[10px] bg-indigo-500 rounded-full border-[3px] box-content border-white shadow-sm z-10"></div>
-                <div className="hidden md:block absolute left-[153px] top-1.5 w-[16px] h-[16px] bg-indigo-500 rounded-full border-4 border-white shadow-sm z-10 transition-transform group-hover:scale-125"></div>
+                <div className="md:hidden absolute left-[3px] top-1.5 w-[10px] h-[10px] bg-blue-500 rounded-full border-[3px] box-content border-white shadow-sm z-10"></div>
+                <div className="hidden md:block absolute left-[153px] top-1.5 w-[16px] h-[16px] bg-blue-500 rounded-full border-4 border-white shadow-sm z-10 transition-transform group-hover:scale-125"></div>
                 
                 <div className="pl-6 md:pl-0 text-xs font-bold text-slate-500 md:text-slate-400 md:w-[160px] md:pr-10 md:text-right shrink-0 pt-1 mb-2 md:mb-0 uppercase tracking-wider">
                   Nov 2019 - Jul 2022

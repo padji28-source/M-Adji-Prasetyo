@@ -35,12 +35,12 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen w-full bg-white text-slate-900 font-sans overflow-x-hidden selection:bg-indigo-100 selection:text-indigo-900 relative">
+    <div className="flex flex-col min-h-screen w-full bg-white text-slate-900 font-sans overflow-x-hidden selection:bg-blue-100 selection:text-blue-900 relative">
       
       {/* ================= GLOBAL BACKGROUND ================= */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Gradient Blur */}
-        <div className="absolute top-[-200px] left-[-100px] w-[500px] h-[500px] bg-indigo-100 rounded-full blur-[120px] opacity-70" />
+        <div className="absolute top-[-200px] left-[-100px] w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] opacity-70" />
         <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-cyan-100 rounded-full blur-[120px] opacity-70" />
 
         {/* Coding Background */}
@@ -88,7 +88,7 @@ export default developer;`}
                 duration: 4 + i * 0.2,
                 repeat: Infinity,
               }}
-              className="absolute w-2 h-2 bg-indigo-300 rounded-full"
+              className="absolute w-2 h-2 bg-blue-300 rounded-full"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,

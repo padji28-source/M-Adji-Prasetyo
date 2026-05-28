@@ -67,11 +67,11 @@ export function Home({ lang }: HomeProps) {
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/60 via-white/80 to-slate-50/95 pointer-events-none" />
       
       {/* Abstract Gradients */}
-      <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] rounded-full bg-gradient-to-br from-indigo-100/60 to-purple-100/40 blur-[100px] pointer-events-none z-0" />
+      <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] rounded-full bg-gradient-to-br from-blue-100/60 to-purple-100/40 blur-[100px] pointer-events-none z-0" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-cyan-100/50 to-blue-100/40 blur-[100px] pointer-events-none z-0" />
       
       {/* Wave / Abstract shape at bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-indigo-50/50 to-transparent pointer-events-none z-0" />
+      <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-blue-50/50 to-transparent pointer-events-none z-0" />
 
       {/* Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0" />
@@ -89,7 +89,7 @@ export function Home({ lang }: HomeProps) {
               duration: 4 + i * 0.2,
               repeat: Infinity,
             }}
-            className="absolute w-2 h-2 bg-indigo-300 rounded-full"
+            className="absolute w-2 h-2 bg-blue-300 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -113,14 +113,14 @@ export function Home({ lang }: HomeProps) {
             {/* Badge */}
             <motion.div
               variants={fadeUp}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-indigo-100 shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm"
             >
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
               </span>
 
-              <span className="text-xs font-semibold text-indigo-900">
+              <span className="text-xs font-semibold text-blue-900">
                 {lang === "ID"
                   ? "Tersedia untuk peluang baru"
                   : "Available for new opportunities"}
@@ -142,7 +142,7 @@ export function Home({ lang }: HomeProps) {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
                 Muhammad
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500">
                   Adji Prasetyo
                 </span>
               </h1>
@@ -165,8 +165,8 @@ export function Home({ lang }: HomeProps) {
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
                {['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL'].map(tech => (
                   <div key={tech} className="px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-600 shadow-sm flex items-center space-x-2">
-                     <div className="w-4 h-4 rounded-full bg-indigo-50 flex items-center justify-center">
-                        <Code size={10} className="text-indigo-500" />
+                     <div className="w-4 h-4 rounded-full bg-blue-50 flex items-center justify-center">
+                        <Code size={10} className="text-blue-500" />
                      </div>
                      <span>{tech}</span>
                   </div>
@@ -219,7 +219,7 @@ export function Home({ lang }: HomeProps) {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -4 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-200 shadow-sm transition-all"
+                    className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-200 shadow-sm transition-all"
                   >
                     <item.icon size={18} />
                   </motion.a>
@@ -238,8 +238,8 @@ export function Home({ lang }: HomeProps) {
           >
             {/* Center Circular Glow */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-               <div className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-to-tr from-indigo-100/80 to-purple-100/60 shadow-[inset_0_0_100px_rgba(255,255,255,0.8)] border border-white/50 relative">
-                  <div className="absolute top-[-20px] left-[-20px] w-full h-full rounded-full border border-indigo-100/50 scale-[1.1]"></div>
+               <div className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-to-tr from-blue-100/80 to-purple-100/60 shadow-[inset_0_0_100px_rgba(255,255,255,0.8)] border border-white/50 relative">
+                  <div className="absolute top-[-20px] left-[-20px] w-full h-full rounded-full border border-blue-100/50 scale-[1.1]"></div>
                </div>
             </div>
 
@@ -263,7 +263,7 @@ export function Home({ lang }: HomeProps) {
                <div className="space-y-2">
                   {['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL'].map((tech, i) => (
                      <div key={tech} className="flex items-center space-x-2">
-                        <div className={`w-2 h-2 rounded-full ${['bg-blue-400', 'bg-slate-800', 'bg-blue-600', 'bg-green-500', 'bg-indigo-500'][i]}`}></div>
+                        <div className={`w-2 h-2 rounded-full ${['bg-blue-400', 'bg-slate-800', 'bg-blue-600', 'bg-green-500', 'bg-blue-500'][i]}`}></div>
                         <span className="text-[10px] md:text-xs font-semibold text-slate-600">{tech}</span>
                      </div>
                   ))}
@@ -290,7 +290,7 @@ export function Home({ lang }: HomeProps) {
                      { name: 'Data Analysis', icon: BarChart3 }
                   ].map((item, i) => (
                      <div key={i} className="flex items-center space-x-3">
-                        <item.icon size={14} className="text-indigo-500" />
+                        <item.icon size={14} className="text-blue-500" />
                         <span className="text-[10px] md:text-xs font-semibold text-slate-600">{item.name}</span>
                      </div>
                   ))}
@@ -357,7 +357,7 @@ export function Home({ lang }: HomeProps) {
                <div className="relative w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                      <path className="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
-                     <path className="text-indigo-500" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
+                     <path className="text-blue-500" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
                   </svg>
                </div>
                <div>
@@ -367,7 +367,7 @@ export function Home({ lang }: HomeProps) {
             </motion.div>
 
             {/* Abstract Shapes */}
-            <div className="absolute top-[20%] left-[20%] w-8 h-8 md:w-12 md:h-12 border-2 border-indigo-200 rounded-lg transform rotate-45 -z-10 animate-pulse"></div>
+            <div className="absolute top-[20%] left-[20%] w-8 h-8 md:w-12 md:h-12 border-2 border-blue-200 rounded-lg transform rotate-45 -z-10 animate-pulse"></div>
             <div className="absolute bottom-[20%] right-[30%] w-6 h-6 md:w-8 md:h-8 border-2 border-purple-200 rounded-full -z-10 animate-bounce" style={{animationDuration: '3s'}}></div>
           </motion.div>
         </div>

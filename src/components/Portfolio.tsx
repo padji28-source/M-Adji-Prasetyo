@@ -124,13 +124,13 @@ export function Portfolio({ lang }: { lang: Language }) {
           className="flex flex-col lg:flex-row gap-12 lg:gap-16 mb-16 items-center"
         >
           <div className="lg:w-1/2 w-full">
-            <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-full text-indigo-600 text-[10px] font-bold tracking-wider uppercase mb-6 shadow-sm">
-              <div className="w-2 h-2 rounded-full bg-indigo-500 shadow-sm"></div>
+            <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-full text-blue-600 text-[10px] font-bold tracking-wider uppercase mb-6 shadow-sm">
+              <div className="w-2 h-2 rounded-full bg-blue-500 shadow-sm"></div>
               <span>Web Developer & Senior Admin Warehouse</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
               {lang === 'ID' ? 'Koleksi ' : 'Selected '}
-              <span className="text-indigo-600">{lang === 'ID' ? 'Portofolio' : 'Works'}</span>
+              <span className="text-blue-600">{lang === 'ID' ? 'Portofolio' : 'Works'}</span>
             </h1>
             <p className="text-slate-500 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
               {lang === 'ID' 
@@ -141,7 +141,7 @@ export function Portfolio({ lang }: { lang: Language }) {
             {/* Stats Row */}
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center bg-white border border-slate-100 px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] space-x-4 flex-1 min-w-[160px]">
-                 <div className="bg-indigo-50 p-3 rounded-xl text-indigo-600 shrink-0"><FolderGit2 size={24} /></div>
+                 <div className="bg-blue-50 p-3 rounded-xl text-blue-600 shrink-0"><FolderGit2 size={24} /></div>
                  <div>
                     <div className="text-xl md:text-2xl font-bold text-slate-800">15+</div>
                     <div className="text-xs font-semibold text-slate-500 mt-0.5">{lang === 'ID' ? 'Proyek Selesai' : 'Projects Done'}</div>
@@ -166,14 +166,14 @@ export function Portfolio({ lang }: { lang: Language }) {
 
           <div className="lg:w-1/2 w-full relative flex justify-center items-center h-[300px] md:h-[400px]">
             {/* Tech Graphic Representation */}
-             <div className="relative w-full max-w-lg h-full bg-gradient-to-br from-slate-50 to-indigo-50/30 rounded-[2rem] border border-slate-100 overflow-hidden flex items-center justify-center shadow-inner">
+             <div className="relative w-full max-w-lg h-full bg-gradient-to-br from-slate-50 to-blue-50/30 rounded-[2rem] border border-slate-100 overflow-hidden flex items-center justify-center shadow-inner">
                 {/* Floating Elements */}
                 <motion.div 
                   animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }} 
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-[15%] left-[20%] w-16 h-16 bg-white shadow-xl rounded-2xl flex items-center justify-center border border-slate-100/50"
                 >
-                  <Code2 className="text-indigo-600" size={32} />
+                  <Code2 className="text-blue-600" size={32} />
                 </motion.div>
                 
                 <motion.div 
@@ -211,7 +211,7 @@ export function Portfolio({ lang }: { lang: Language }) {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`relative px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center space-x-2 shrink-0 border ${
                     isActive 
-                      ? 'border-indigo-600 bg-indigo-600 text-white shadow-md' 
+                      ? 'border-blue-600 bg-blue-600 text-white shadow-md' 
                       : 'border-slate-300 text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                   }`}
                 >
@@ -254,9 +254,9 @@ export function Portfolio({ lang }: { lang: Language }) {
 
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-transparent flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                       <div className="bg-indigo-600/85 backdrop-blur-md rounded-xl py-5 px-6 flex flex-col items-center border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl min-w-[60%] text-center">
+                       <div className="bg-blue-600/85 backdrop-blur-md rounded-xl py-5 px-6 flex flex-col items-center border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl min-w-[60%] text-center">
                           <h4 className="text-white text-base md:text-sm font-semibold mb-3 tracking-wide">{project.title}</h4>
-                          <span className="bg-white text-indigo-600 text-xs font-bold px-5 py-2 rounded-full shadow-sm hover:scale-105 transition-transform">
+                          <span className="bg-white text-blue-600 text-xs font-bold px-5 py-2 rounded-full shadow-sm hover:scale-105 transition-transform">
                             {lang === 'ID' ? 'Lihat Proyek' : 'View Project'}
                           </span>
                        </div>
@@ -277,7 +277,7 @@ export function Portfolio({ lang }: { lang: Language }) {
         {/* CTA Footer */}
         <div className="mt-24 p-8 md:p-12 bg-white rounded-[2rem] border border-slate-200 shadow-xl flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
            {/* Abstract Gradient Glows */}
-           <div className="absolute top-[-100px] right-[-100px] w-64 h-64 bg-indigo-100 rounded-full filter blur-[80px] pointer-events-none"></div>
+           <div className="absolute top-[-100px] right-[-100px] w-64 h-64 bg-blue-100 rounded-full filter blur-[80px] pointer-events-none"></div>
            <div className="absolute bottom-[-100px] left-[-100px] w-64 h-64 bg-cyan-100 rounded-full filter blur-[80px] pointer-events-none"></div>
            
            <div className="relative z-10 flex items-center space-x-4 mb-6 md:mb-0">
@@ -285,7 +285,7 @@ export function Portfolio({ lang }: { lang: Language }) {
              <h2 className="text-xl md:text-2xl font-bold text-slate-800">{lang === 'ID' ? 'Punya proyek menarik? Mari bekerja sama!' : 'Have an interesting project? Let\'s work together!'}</h2>
            </div>
            
-           <a href="mailto:muhammad.adjiprasetyo28@gmail.com" className="relative z-10 bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white px-8 py-3.5 rounded-full font-bold flex items-center space-x-2 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+           <a href="mailto:muhammad.adjiprasetyo28@gmail.com" className="relative z-10 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white px-8 py-3.5 rounded-full font-bold flex items-center space-x-2 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               <span>{lang === 'ID' ? 'Hubungi Saya' : 'Contact Me'}</span>
               <ArrowRight size={18} />
            </a>

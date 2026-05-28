@@ -41,21 +41,21 @@ export function Navbar({ currentView, setCurrentView, lang, setLang }: NavbarPro
                 onMouseLeave={() => setHoveredNav(null)}
                 className={`relative flex items-center justify-center h-10 rounded-full transition-all duration-300 outline-none ${
                   isActive 
-                    ? 'text-indigo-600 font-semibold px-4' 
+                    ? 'text-blue-600 font-semibold px-4' 
                     : isHovered
-                      ? 'text-indigo-600 font-medium px-4 bg-slate-50'
+                      ? 'text-blue-600 font-medium px-4 bg-slate-50'
                       : 'text-slate-500 hover:text-slate-900 px-3'
                 }`}
               >
                 {isActive && (
                   <motion.div 
                     layoutId="navbar-active-bg"
-                    className="absolute inset-0 bg-indigo-50 rounded-full"
+                    className="absolute inset-0 bg-blue-50 rounded-full"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
                 <span className="relative z-10 flex items-center justify-center">
-                  <Icon size={18} strokeWidth={2.5} className={(isActive || isHovered) ? "text-indigo-600" : "opacity-70"} />
+                  <Icon size={18} strokeWidth={2.5} className={(isActive || isHovered) ? "text-blue-600" : "opacity-70"} />
                   <AnimatePresence>
                     {(isActive || isHovered) && (
                       <motion.span 
@@ -78,10 +78,10 @@ export function Navbar({ currentView, setCurrentView, lang, setLang }: NavbarPro
 
         {/* Language Toggle */}
         <div className="flex items-center space-x-2 px-2">
-          <span className={`text-[11px] font-bold tracking-wider transition-colors ${lang === 'ID' ? 'text-indigo-600' : 'text-slate-400'}`}>ID</span>
+          <span className={`text-[11px] font-bold tracking-wider transition-colors ${lang === 'ID' ? 'text-blue-600' : 'text-slate-400'}`}>ID</span>
           <button 
             onClick={() => setLang(lang === 'ID' ? 'EN' : 'ID')}
-            className="w-11 h-6 bg-slate-100 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-100 rounded-full relative flex items-center p-1 transition-colors border border-slate-200"
+            className="w-11 h-6 bg-slate-100 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-100 rounded-full relative flex items-center p-1 transition-colors border border-slate-200"
             aria-label="Toggle language"
           >
             <motion.div 
@@ -90,7 +90,7 @@ export function Navbar({ currentView, setCurrentView, lang, setLang }: NavbarPro
               className={`w-4 h-4 bg-white shadow-sm rounded-full absolute ${lang === 'EN' ? 'right-1' : 'left-1'}`}
             />
           </button>
-          <span className={`text-[11px] font-bold tracking-wider transition-colors ${lang === 'EN' ? 'text-indigo-600' : 'text-slate-400'}`}>EN</span>
+          <span className={`text-[11px] font-bold tracking-wider transition-colors ${lang === 'EN' ? 'text-blue-600' : 'text-slate-400'}`}>EN</span>
         </div>
       </div>
     </motion.header>
