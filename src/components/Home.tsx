@@ -19,9 +19,10 @@ import profileImg from "../assets/images/adm.png";
 
 interface HomeProps {
   lang: Language;
+  setCurrentView: (view: string) => void;
 }
 
-export function Home({ lang }: HomeProps) {
+export function Home({ lang, setCurrentView }: HomeProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -179,7 +180,10 @@ export function Home({ lang }: HomeProps) {
               className="flex flex-wrap gap-4 pt-2"
             >
               <motion.button
-                onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  setCurrentView('portfolio');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group px-6 py-3.5 rounded-xl bg-slate-900 text-white font-semibold shadow-xl shadow-slate-900/20 flex items-center gap-2 transition-all hover:bg-slate-800"

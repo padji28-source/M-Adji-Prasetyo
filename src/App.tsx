@@ -24,7 +24,7 @@ export default function App() {
   const renderView = () => {
     switch (currentView) {
       case 'home':
-        return <Home lang={lang} />;
+        return <Home lang={lang} setCurrentView={setCurrentView} />;
       case 'resume':
         return <div className="pt-28 md:pt-36 pb-20 w-full"><Resume lang={lang} /></div>;
       case 'portfolio':
