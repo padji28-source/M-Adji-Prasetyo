@@ -201,32 +201,21 @@ export function Portfolio({ lang }: { lang: Language }) {
         </motion.div>
         
         {/* Category Filters */}
-        <div className="flex justify-start md:justify-center mb-12 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="flex justify-start md:justify-center mb-10 overflow-x-auto pb-4 scrollbar-hide">
           <div className="flex items-center gap-3">
             {categories.map((cat) => {
-              const Icon = cat.icon;
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`relative px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center space-x-2 shrink-0 border ${
+                  className={`relative px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center space-x-2 shrink-0 border ${
                     isActive 
-                      ? 'border-indigo-600 text-white' 
-                      : 'border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      ? 'border-indigo-600 bg-indigo-600 text-white shadow-md' 
+                      : 'border-slate-300 text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                   }`}
                 >
-                  {isActive && (
-                    <motion.div
-                      layoutId="category-active-bg"
-                      className="absolute inset-0 bg-indigo-600 rounded-xl shadow-md"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10 flex items-center space-x-2">
-                    <Icon size={16} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-white" : "text-slate-400"} />
-                    <span>{cat.label}</span>
-                  </span>
+                  <span className="relative z-10">{cat.label}</span>
                 </button>
               );
             })}
@@ -239,7 +228,7 @@ export function Portfolio({ lang }: { lang: Language }) {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
@@ -253,35 +242,32 @@ export function Portfolio({ lang }: { lang: Language }) {
                 href={Array.isArray(project.link) ? project.link[0] : project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-2xl hover:border-indigo-300 transition-all duration-500 aspect-[16/10] cursor-pointer bg-slate-50"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col hover:shadow-xl transition-all duration-300 cursor-pointer p-4 pb-3"
               >
-                  <img 
-                     src={project.image} 
-                     alt={project.title} 
-                     className="w-full h-full object-cover object-top origin-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                  
-                  {/* Category overlay */}
-                  <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1.5 bg-white/90 backdrop-blur-md shadow-sm text-slate-700 text-[10px] font-bold uppercase tracking-wider rounded-lg">
-                      {project.category}
-                    </span>
-                  </div>
+                  {/* Image Container */}
+                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 flex shrink-0">
+                    <img 
+                       src={project.image} 
+                       alt={project.title} 
+                       className="w-full h-full object-cover object-top origin-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/50 backdrop-blur-[0px] group-hover:backdrop-blur-sm transition-all duration-500 z-10 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
-                     
-                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col items-center">
-                        <div className="bg-white text-indigo-600 w-14 h-14 rounded-full flex items-center justify-center shadow-xl mb-4 transform scale-75 group-hover:scale-100 transition-transform duration-500 delay-75">
-                           <ExternalLink size={24} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-                        </div>
-                        <h3 className="text-white font-bold text-xl md:text-2xl drop-shadow-md px-4 text-center">
-                           {project.title}
-                        </h3>
-                        <p className="text-indigo-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
-                           {lang === 'ID' ? 'Kunjungi Situs' : 'Visit Site'}
-                        </p>
-                     </div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-transparent flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                       <div className="bg-indigo-600/85 backdrop-blur-md rounded-xl py-5 px-6 flex flex-col items-center border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl min-w-[60%] text-center">
+                          <h4 className="text-white text-base md:text-sm font-semibold mb-3 tracking-wide">{project.title}</h4>
+                          <span className="bg-white text-indigo-600 text-xs font-bold px-5 py-2 rounded-full shadow-sm hover:scale-105 transition-transform">
+                            {lang === 'ID' ? 'Lihat Proyek' : 'View Project'}
+                          </span>
+                       </div>
+                    </div>
+                  </div>
+                  
+                  {/* Title Section (Below image) */}
+                  <div className="pt-4 pb-2 px-1 text-left">
+                     <h3 className="font-bold text-slate-900 text-lg md:text-[1.1rem]">
+                        {project.title}
+                     </h3>
                   </div>
               </motion.a>
             ))}
