@@ -1,0 +1,6 @@
+{
+  "name": "Adji's Portfolio",
+  "description": "Personal developer portfolio with smooth page transitions and beautiful typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
