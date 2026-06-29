@@ -74,11 +74,33 @@ export function Resume({ lang }: { lang: Language }) {
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Jakarta Raya, Indonesia (Di lokasi)</p>
                   <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Prepare a recap and daily stock report for each branch.</li>
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Monitor stock levels at each branch.</li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID' 
+                          ? "Mengelola rekonsiliasi stok harian dan pelaporan inventaris untuk seluruh kantor cabang secara akurat."
+                          : "Manage daily stock reconciliation and inventory reporting for all branches with absolute accuracy."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Memantau tingkat ketersediaan stok cabang demi menjamin pasokan optimal dan meminimalkan overstock."
+                          : "Monitor and optimize branch stock levels to ensure product availability and minimize overstocking."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengoptimalkan efisiensi supply chain melalui integrasi data pergudangan dan audit stok berkala."
+                          : "Optimize supply chain efficiency through warehouse data integration and periodic stock audits."}
+                      </span>
+                    </li>
                   </ul>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {["Microsoft Excel", "Leadership", "+6 keahlian"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
+                    {["Supply Chain", "Inventory Management", "Microsoft Excel", "Leadership"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
                   </div>
                 </div>
               </div>
@@ -98,11 +120,25 @@ export function Resume({ lang }: { lang: Language }) {
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Jakarta Raya, Indonesia</p>
                   <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Manage warehouse inventory data.</li>
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Record incoming and outgoing goods to the warehouse.</li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengelola database pergudangan dengan akurasi tinggi menggunakan sistem administrasi inventaris modern."
+                          : "Manage warehouse database with high accuracy using modern inventory administration systems."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mencatat arus keluar-masuk barang, menyusun pelaporan, dan mengawasi penyimpanan fisik barang berharga tinggi."
+                          : "Record inbound/outbound goods flow, compile reporting, and supervise the physical storage of high-value items."}
+                      </span>
+                    </li>
                   </ul>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {["Inventory Management", "Microsoft Excel", "+3 keahlian"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
+                    {["Inventory Control", "Database Admin", "Logistics", "Microsoft Excel"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
                   </div>
                 </div>
               </div>
@@ -121,8 +157,26 @@ export function Resume({ lang }: { lang: Language }) {
                     <div className="text-base font-black text-slate-900 flex items-center mt-1 sm:mt-0 italic"><Building2 size={16} className="mr-2 text-slate-500"/> SUMBER MITRA JAYA, PT</div>
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Jakarta Selatan, Jakarta Raya, Indonesia</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {["Microsoft Excel"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
+                  <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Memberikan dukungan administratif menyeluruh untuk kelancaran operasional General Affair dan pemeliharaan fasilitas."
+                          : "Provide comprehensive administrative support for smooth General Affair operations and facility maintenance."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengelola korespondensi, inventarisasi aset operasional kantor, dan koordinasi dengan vendor."
+                          : "Manage official correspondence, inventory office operational assets, and coordinate with vendors."}
+                      </span>
+                    </li>
+                  </ul>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {["General Affair", "Administration", "Vendor Coordination", "Microsoft Excel"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
                   </div>
                 </div>
               </div>
@@ -142,11 +196,25 @@ export function Resume({ lang }: { lang: Language }) {
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Cikupa mas (Di lokasi)</p>
                   <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Manage material data using the SAP system.</li>
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Control stock of mixed material requirements.</li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengoperasikan modul SAP ERP secara presisi untuk pencatatan master data material dan transaksi inventaris pabrik."
+                          : "Operate SAP ERP module precisely to register material master data and manage factory inventory transactions."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengontrol stok ketersediaan bahan baku terpadu demi memastikan kelancaran rantai produksi manufaktur."
+                          : "Control raw material inventory to ensure a seamless and optimized manufacturing production pipeline."}
+                      </span>
+                    </li>
                   </ul>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {["Microsoft Excel", "SAP ERP", "+2 keahlian"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
+                    {["SAP ERP", "Material Control", "Inventory Planning", "Data Auditing"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
                   </div>
                 </div>
               </div>
@@ -166,11 +234,25 @@ export function Resume({ lang }: { lang: Language }) {
                   </div>
                   <p className="text-slate-500 text-sm mb-3">Cikarang</p>
                   <ul className="grid gap-2 text-sm text-slate-600 leading-relaxed md:max-w-xl">
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Manage incoming and outgoing stationery transactions.</li>
-                    <li className="flex items-start"><span className="text-slate-300 mr-2 break-keep">&bull;</span> Recap stationery usage.</li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mengelola alur keluar-masuk barang operasional (stationary & supplies) serta merangkum pelaporan konsumsi berkala."
+                          : "Manage logistics transactions for office stationery and supplies, and generate periodic consumption summary reports."}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-slate-300 mr-2 break-keep">&bull;</span>
+                      <span>
+                        {lang === 'ID'
+                          ? "Mendukung kelancaran logistik internal operasional gudang melalui administrasi pencatatan yang tertata."
+                          : "Support internal logistics and warehouse operations through structured and well-maintained recording administration."}
+                      </span>
+                    </li>
                   </ul>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {["Microsoft Excel"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
+                    {["Admin Operations", "Logistics Transactions", "Microsoft Excel"].map((s, i) => <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-[10px] uppercase tracking-wider font-bold rounded-md">{s}</span>)}
                   </div>
                 </div>
               </div>
@@ -243,32 +325,34 @@ export function Resume({ lang }: { lang: Language }) {
             </div>
 
             <div>
-              <h2 className="text-lg font-bold text-slate-800 mb-5">{lang === 'ID' ? 'Keahlian Inti' : 'Core Capabilities'}</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Leadership</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Time Management</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Microsoft Excel</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Inventory Management</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">SAP ERP</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">CodeIgniter</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Logistics Operations</span>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center group bg-white shadow-sm border border-slate-100 p-4 rounded-2xl">
-                  <span className="text-sm font-bold text-slate-700 tracking-wide text-center">Fullstack Dev</span>
-                </motion.div>
+              <h2 className="text-lg font-bold text-slate-800 mb-4">{lang === 'ID' ? 'Keahlian Inti' : 'Core Capabilities'}</h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                    {lang === 'ID' ? 'SCM & Logistik' : 'SCM & Logistics'}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["Warehouse Admin", "SAP ERP", "Inventory Control", "SCM Reconciliation", "Logistics Audit", "Supplies Control"].map((s, idx) => (
+                      <motion.div key={idx} whileHover={{ scale: 1.02 }} className="flex items-center justify-center bg-slate-50 border border-slate-100 p-2.5 rounded-xl">
+                        <span className="text-[11px] font-bold text-slate-700 tracking-wide text-center">{s}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                    {lang === 'ID' ? 'Teknologi & Dev' : 'Tech & Dev Stack'}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {["React.js", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "CodeIgniter", "Database (SQL)", "Git Versioning"].map((s, idx) => (
+                      <motion.div key={idx} whileHover={{ scale: 1.02 }} className="flex items-center justify-center bg-blue-50/50 border border-blue-100/50 p-2.5 rounded-xl">
+                        <span className="text-[11px] font-bold text-blue-800 tracking-wide text-center">{s}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
