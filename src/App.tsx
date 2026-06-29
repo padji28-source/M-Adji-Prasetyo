@@ -30,7 +30,7 @@ export default function App() {
       case 'portfolio':
         return <div className="pt-28 md:pt-36 pb-20 w-full"><Portfolio lang={lang} /></div>;
       default:
-        return <Home lang={lang} />;
+        return <Home lang={lang} setCurrentView={setCurrentView} />;
     }
   };
 
