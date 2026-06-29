@@ -8,6 +8,10 @@ import imgSm from '../assets/images/sm.png';
 import imgSsc from '../assets/images/SSC.png';
 import imgDp from '../assets/images/dp.png';
 import imgBu from '../assets/images/bu.png';
+import imgWms from '../assets/images/smart_warehouse_bg_1779941616059.png';
+import imgFinSupport from '../assets/images/fin_support_mockup_1782705931929.jpg';
+import imgGuyubRukun from '../assets/images/guyub_rukun_mockup_1782705947884.jpg';
+import imgKloppSeven from '../assets/images/klopp_tb_mockup_1782706204060.jpg';
 
 export function Portfolio({ lang }: { lang: Language }) {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -16,6 +20,7 @@ export function Portfolio({ lang }: { lang: Language }) {
     { id: 'All', label: lang === 'ID' ? 'Semua' : 'All', icon: LayoutGrid },
     { id: 'ERP & Logistics', label: lang === 'ID' ? 'ERP & Logistik' : 'ERP & Logistics', icon: Truck },
     { id: 'Web Apps', label: lang === 'ID' ? 'Aplikasi Web' : 'Web Apps', icon: MonitorSmartphone },
+    { id: 'PWA', label: lang === 'ID' ? 'Aplikasi PWA' : 'PWA Apps', icon: Layers },
     { id: 'Data & AI', label: lang === 'ID' ? 'Data & AI' : 'Data & AI', icon: Database }
   ];
 
@@ -82,14 +87,62 @@ export function Portfolio({ lang }: { lang: Language }) {
     },
     {
       id: 6,
-      title: "Dashboad Control Pengepokan",
+      title: "Dashboard Control Pengepokan",
       category: 'Data & AI',
       description: lang === 'ID'
         ? "Sistem dashboard waktu nyata untuk memantau aktivitas pengepokan dan kontrol arus gudang logistik."
         : "Real-time dashboard system to monitor packing activities and logistics warehouse flow control.",
       image: imgDp,
       tags: ["React", "Socket.io", "Express", "Analytics"],
-      link: "https://dashboard-pok.vercel.app/",
+      link: "https://dashboard-hq-warehouse.vercel.app/",
+      github: "#"
+    },
+    {
+      id: 7,
+      title: "WMS (Warehouse Management System)",
+      category: 'ERP & Logistics',
+      description: lang === 'ID'
+        ? "Sistem manajemen gudang berbasis web untuk optimasi kontrol stok, pelacakan masuk-keluar barang, dan efisiensi logistik."
+        : "Web-based Warehouse Management System for optimized stock control, inbound-outbound tracking, and logistics efficiency.",
+      image: imgWms,
+      tags: ["Next.js", "Tailwind CSS", "TypeScript", "ERP", "WMS"],
+      link: "https://wms-a5-tes.vercel.app/",
+      github: "#"
+    },
+    {
+      id: 8,
+      title: "Fin Support PWA",
+      category: 'PWA',
+      description: lang === 'ID'
+        ? "Aplikasi PWA pendukung finansial & pelacakan pengeluaran operasional dengan integrasi offline-first cepat dan andal."
+        : "Financial support and operational expense tracking PWA with fast, reliable offline-first integration.",
+      image: imgFinSupport,
+      tags: ["PWA", "React", "Tailwind CSS", "IndexedDB"],
+      link: "https://fin-support.vercel.app/",
+      github: "#"
+    },
+    {
+      id: 9,
+      title: "Guyub Rukun PWA",
+      category: 'PWA',
+      description: lang === 'ID'
+        ? "Aplikasi PWA manajemen rukun tetangga/warga untuk mempermudah iuran sosial, laporan kas, dan info warga."
+        : "Neighborhood association management PWA to streamline social fees, cash flow reports, and community news.",
+      image: imgGuyubRukun,
+      tags: ["PWA", "Next.js", "Tailwind CSS", "Firebase"],
+      link: "https://guyub-rukun.vercel.app/",
+      github: "#"
+    },
+    {
+      id: 10,
+      title: "KLOPP.tb #TempatBercerita",
+      category: 'Web Apps',
+      description: lang === 'ID'
+        ? "Aplikasi web interaktif kedai kopi modern yang mengintegrasikan Mode Pelanggan untuk pemesanan dinamis dan sistem Kasir Online yang responsif."
+        : "Interactive modern coffee shop web app integrating a dynamic Customer Mode for ordering and a responsive Online Cashier system.",
+      image: imgKloppSeven,
+      tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Cashier System"],
+      link: "https://klopp-seven.vercel.app/",
       github: "#"
     }
   ];
@@ -130,7 +183,7 @@ export function Portfolio({ lang }: { lang: Language }) {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
               {lang === 'ID' ? 'Koleksi ' : 'Selected '}
-              <span className="text-blue-600">{lang === 'ID' ? 'Portofolio' : 'Works'}</span>
+              <span className="text-blue-600">Portofolio</span>
             </h1>
             <p className="text-slate-500 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
               {lang === 'ID' 
@@ -242,10 +295,10 @@ export function Portfolio({ lang }: { lang: Language }) {
                 href={Array.isArray(project.link) ? project.link[0] : project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col hover:shadow-xl transition-all duration-300 cursor-pointer p-4 pb-3"
+                className="group bg-white rounded-3xl overflow-hidden shadow-[0_2px_10px_rgb(0,0,0,0.03)] border border-slate-100 flex flex-col hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] hover:-translate-y-1 hover:border-slate-200 transition-all duration-300 cursor-pointer p-4 pb-3"
               >
                   {/* Image Container */}
-                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 flex shrink-0">
+                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 flex shrink-0">
                     <img 
                        src={project.image} 
                        alt={project.title} 
