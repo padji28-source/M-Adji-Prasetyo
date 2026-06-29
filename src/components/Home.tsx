@@ -60,16 +60,17 @@ export function Home({ lang, setCurrentView }: HomeProps) {
       
       {/* Image Background */}
       <div 
-        className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-cover bg-center bg-no-repeat mix-blend-multiply"
+        className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-cover bg-center bg-no-repeat mix-blend-multiply filter grayscale"
         style={{ backgroundImage: `url('https://w7.pngwing.com/pngs/620/868/png-transparent-computer-background-computer-keyboard-science-and-technology.png')` }}
       />
       
       {/* Gradient Overlay for professional look */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/60 via-white/80 to-slate-50/95 pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/80 via-slate-50/90 to-slate-100/95 pointer-events-none" />
       
       {/* Abstract Gradients */}
-      <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] rounded-full bg-gradient-to-br from-blue-100/60 to-purple-100/40 blur-[100px] pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-cyan-100/50 to-blue-100/40 blur-[100px] pointer-events-none z-0" />
+      <div className="absolute top-[-20%] right-[-10%] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-blue-100/40 to-slate-200/30 blur-[120px] pointer-events-none z-0" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-cyan-50/40 to-blue-50/30 blur-[120px] pointer-events-none z-0" />
+
       
       {/* Wave / Abstract shape at bottom */}
       <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-blue-50/50 to-transparent pointer-events-none z-0" />
@@ -143,12 +144,12 @@ export function Home({ lang, setCurrentView }: HomeProps) {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
                 Muhammad
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                   Adji Prasetyo
                 </span>
               </h1>
-              <h3 className="text-xl md:text-2xl font-regular text-slate-600 mt-4">
-                Web Developer & Senior Admin Warehouse
+              <h3 className="text-xl md:text-2xl font-medium text-slate-600 mt-4">
+                Web Developer <span className="text-blue-500 mx-1">&</span> Senior Admin Warehouse
               </h3>
             </motion.div>
 
@@ -186,9 +187,9 @@ export function Home({ lang, setCurrentView }: HomeProps) {
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-6 py-3.5 rounded-xl bg-slate-900 text-white font-semibold shadow-xl shadow-slate-900/20 flex items-center gap-2 transition-all hover:bg-slate-800"
+                className="group px-7 py-3.5 rounded-full bg-slate-900 text-white font-bold shadow-xl shadow-slate-900/10 flex items-center gap-2 transition-all hover:bg-slate-800"
               >
-                {lang === 'ID' ? 'Lihat Portfolio' : 'View Portfolio'}
+                {lang === 'ID' ? 'Lihat Portofolio' : 'View Portofolio'}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
@@ -196,7 +197,7 @@ export function Home({ lang, setCurrentView }: HomeProps) {
                 href="mailto:muhammad.adjiprasetyo28@gmail.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-6 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold shadow-sm flex items-center gap-2 transition-all hover:border-slate-300"
+                className="group px-7 py-3.5 rounded-full bg-white border border-slate-200/80 text-slate-700 font-bold shadow-sm flex items-center gap-2 transition-all hover:border-slate-300 hover:bg-slate-50"
               >
                 {lang === 'ID' ? 'Hubungi Saya' : 'Contact Me'}
                 <Send size={18} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
@@ -235,40 +236,51 @@ export function Home({ lang, setCurrentView }: HomeProps) {
           {/* ================= RIGHT ================= */}
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative lg:h-[700px] flex items-center justify-center mt-12 lg:mt-0 pb-20 lg:pb-0"
           >
             {/* Center Circular Glow */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-               <div className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full bg-gradient-to-tr from-blue-100/80 to-purple-100/60 shadow-[inset_0_0_100px_rgba(255,255,255,0.8)] border border-white/50 relative">
-                  <div className="absolute top-[-20px] left-[-20px] w-full h-full rounded-full border border-blue-100/50 scale-[1.1]"></div>
+               <div className="w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-full bg-gradient-to-tr from-blue-100/50 to-purple-100/40 blur-3xl relative">
                </div>
             </div>
 
-            {/* Image */}
-            <div className="relative z-10 w-[260px] md:w-[380px]">
-               <img src={profileImg} alt="Muhammad Adji Prasetyo" className="w-full h-auto object-cover filter drop-shadow-2xl translate-y-[-10px] md:translate-y-[-20px]" />
+            {/* Main Portrait Frame (Rounded Rectangle Poster with pristine shadows) */}
+            <div className="relative z-10 w-[270px] h-[270px] md:w-[410px] md:h-[410px] rounded-[40px] overflow-hidden border-4 border-white shadow-[0_25px_60px_rgba(15,23,42,0.12)] bg-slate-100 flex items-center justify-center">
+               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent z-10 pointer-events-none" />
+               <img 
+                 src={profileImg} 
+                 alt="Muhammad Adji Prasetyo" 
+                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" 
+               />
             </div>
 
             {/* Floating Card 1: Tech Stack (Top Left) */}
             <motion.div 
-               animate={{ y: [0, -10, 0] }}
+               animate={{ y: [0, -8, 0] }}
                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-               className="absolute top-[0%] left-[-5%] md:left-[0%] bg-white/90 backdrop-blur-md p-4 md:p-5 rounded-2xl shadow-xl border border-white z-20 min-w-[140px]"
+               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+               className="absolute top-[-4%] left-[-8%] md:left-[-4%] bg-white/95 backdrop-blur-md p-4 md:p-5 rounded-3xl shadow-[0_15px_35px_rgba(15,23,42,0.08)] border border-slate-100/80 z-20 min-w-[150px]"
             >
                <div className="flex items-center space-x-2 mb-3">
                   <div className="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center border border-slate-100">
-                     <Code size={14} className="text-slate-700" />
+                     <Code size={13} className="text-slate-600" />
                   </div>
-                  <span className="font-bold text-xs md:text-sm text-slate-800">Tech Stack</span>
+                  <span className="font-bold text-xs text-slate-800">Tech Stack</span>
                </div>
                <div className="space-y-2">
-                  {['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL'].map((tech, i) => (
-                     <div key={tech} className="flex items-center space-x-2">
-                        <div className={`w-2 h-2 rounded-full ${['bg-blue-400', 'bg-slate-800', 'bg-blue-600', 'bg-green-500', 'bg-blue-500'][i]}`}></div>
-                        <span className="text-[10px] md:text-xs font-semibold text-slate-600">{tech}</span>
+                  {[
+                    { name: 'React', color: 'bg-blue-400' },
+                    { name: 'Next.js', color: 'bg-slate-800' },
+                    { name: 'TypeScript', color: 'bg-blue-600' },
+                    { name: 'Node.js', color: 'bg-emerald-500' },
+                    { name: 'PostgreSQL', color: 'bg-indigo-500' }
+                  ].map((tech) => (
+                     <div key={tech.name} className="flex items-center space-x-2">
+                        <div className={`w-2 h-2 rounded-full ${tech.color}`}></div>
+                        <span className="text-[11px] font-bold text-slate-600">{tech.name}</span>
                      </div>
                   ))}
                </div>
@@ -276,26 +288,29 @@ export function Home({ lang, setCurrentView }: HomeProps) {
 
             {/* Floating Card 2: Spesialisasi (Top Right) */}
             <motion.div 
-               animate={{ y: [0, 15, 0] }}
-               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-               className="absolute top-[-5%] md:top-[5%] right-[-5%] md:right-[5%] bg-white/90 backdrop-blur-md p-4 md:p-5 rounded-2xl shadow-xl border border-white z-20 min-w-[180px]"
+               animate={{ y: [0, 10, 0] }}
+               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+               className="absolute top-[-10%] md:top-[-2%] right-[-6%] md:right-[-2%] bg-white/95 backdrop-blur-md p-4 md:p-5 rounded-3xl shadow-[0_15px_35px_rgba(15,23,42,0.08)] border border-slate-100/80 z-20 min-w-[190px]"
             >
-               <div className="flex items-center space-x-2 mb-4">
+               <div className="flex items-center space-x-2 mb-3.5">
                   <div className="w-7 h-7 rounded-lg bg-purple-50 flex items-center justify-center border border-purple-100">
-                     <Code size={14} className="text-purple-600" />
+                     <Code size={13} className="text-purple-600" />
                   </div>
-                  <span className="font-bold text-xs md:text-sm text-slate-800">Spesialisasi</span>
+                  <span className="font-bold text-xs text-slate-800">Spesialisasi</span>
                </div>
-               <div className="space-y-3">
+               <div className="space-y-2.5">
                   {[
                      { name: 'Web Development', icon: Monitor },
                      { name: 'ERP System', icon: Server },
                      { name: 'Warehouse Management', icon: Box },
                      { name: 'Data Analysis', icon: BarChart3 }
                   ].map((item, i) => (
-                     <div key={i} className="flex items-center space-x-3">
-                        <item.icon size={14} className="text-blue-500" />
-                        <span className="text-[10px] md:text-xs font-semibold text-slate-600">{item.name}</span>
+                     <div key={i} className="flex items-center space-x-2.5">
+                        <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center">
+                           <item.icon size={11} className="text-blue-500" />
+                        </div>
+                        <span className="text-[11px] font-bold text-slate-600">{item.name}</span>
                      </div>
                   ))}
                </div>
@@ -303,76 +318,88 @@ export function Home({ lang, setCurrentView }: HomeProps) {
 
             {/* Floating Card 3: Project Selesai (Middle Left) */}
             <motion.div 
-               animate={{ y: [0, -12, 0] }}
-               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-               className="absolute top-[40%] md:top-[45%] left-[-15%] md:left-[-10%] bg-white/90 backdrop-blur-md p-4 md:p-5 rounded-2xl shadow-xl border border-white z-20"
+               animate={{ y: [0, -10, 0] }}
+               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+               className="absolute bottom-[20%] md:bottom-[25%] left-[-10%] md:left-[-12%] bg-white/95 backdrop-blur-md p-4 md:p-5 rounded-3xl shadow-[0_15px_35px_rgba(15,23,42,0.08)] border border-slate-100/80 z-20"
             >
-               <h4 className="text-[10px] md:text-xs font-bold text-slate-500 mb-1">Project Selesai</h4>
-               <div className="flex items-baseline space-x-1 md:space-x-2">
-                  <span className="text-2xl md:text-3xl font-extrabold text-slate-800">15+</span>
-                  <span className="text-[10px] md:text-xs text-slate-400">Proyek</span>
+               <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Project Selesai</h4>
+               <div className="flex items-baseline space-x-1.5 mb-2">
+                  <span className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">15+</span>
+                  <span className="text-xs font-bold text-slate-500">Proyek</span>
                </div>
-               {/* Simple SVG Chart */}
-               <div className="mt-2 md:mt-3">
-                  <svg width="100" height="30" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[80px] md:w-[120px]">
-                     <path d="M0 30L20 15L40 25L60 10L80 20L100 5L120 15" stroke="#6366F1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                     <circle cx="20" cy="15" r="3" fill="white" stroke="#6366F1" strokeWidth="2"/>
-                     <circle cx="40" cy="25" r="3" fill="white" stroke="#6366F1" strokeWidth="2"/>
-                     <circle cx="60" cy="10" r="3" fill="white" stroke="#6366F1" strokeWidth="2"/>
-                     <circle cx="80" cy="20" r="3" fill="white" stroke="#6366F1" strokeWidth="2"/>
-                     <circle cx="100" cy="5" r="3" fill="white" stroke="#6366F1" strokeWidth="2"/>
+               
+               {/* Aesthetic Smooth SVG Sparkline Graph */}
+               <div className="my-3">
+                  <svg width="110" height="28" viewBox="0 0 110 28" fill="none" className="w-[90px] md:w-[110px]">
+                     <path 
+                       d="M0 20C15 17 30 25 45 12C60 4 75 16 90 8C98 3 104 7 110 2" 
+                       stroke="url(#gradient-blue)" 
+                       strokeWidth="2.5" 
+                       strokeLinecap="round" 
+                       strokeLinejoin="round"
+                     />
+                     <defs>
+                        <linearGradient id="gradient-blue" x1="0" y1="0" x2="110" y2="0" gradientUnits="userSpaceOnUse">
+                           <stop offset="0%" stopColor="#2563eb" />
+                           <stop offset="100%" stopColor="#06b6d4" />
+                        </linearGradient>
+                     </defs>
+                     <circle cx="45" cy="12" r="3.5" fill="white" stroke="#2563eb" strokeWidth="2" />
+                     <circle cx="90" cy="8" r="3.5" fill="white" stroke="#06b6d4" strokeWidth="2" />
                   </svg>
                </div>
-               <div className="mt-2 text-[8px] md:text-[10px] font-semibold text-emerald-500">
-                 ↑ 20% <span className="text-slate-400 font-medium">dari bulan lalu</span>
+               <div className="text-[9px] font-bold text-emerald-500 flex items-center gap-1">
+                 <span className="bg-emerald-50 px-1 py-0.5 rounded">↑ 20%</span>
+                 <span className="text-slate-400 font-medium">dari bulan lalu</span>
                </div>
             </motion.div>
 
             {/* Floating Card 4: Code Snippet (Middle Right) */}
             <motion.div 
-               animate={{ y: [0, 10, 0] }}
-               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-               className="hidden md:block absolute top-[50%] right-[-10%] bg-slate-900 p-5 rounded-2xl shadow-2xl border border-slate-700 z-30 min-w-[260px]"
+               animate={{ y: [0, 8, 0] }}
+               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
+               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+               className="hidden md:block absolute bottom-[10%] right-[-15%] lg:right-[-12%] bg-[#0b1329] p-5 rounded-[24px] shadow-[0_25px_50px_rgba(15,23,42,0.25)] border border-slate-800/80 z-30 min-w-[280px]"
             >
-                <div className="flex space-x-1.5 mb-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                <div className="flex space-x-1.5 mb-3.5 border-b border-slate-800/50 pb-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+                  <span className="text-[9px] font-mono text-slate-500 ml-2">developer.ts</span>
                 </div>
-                <pre className="text-[10px] font-mono text-slate-300 leading-relaxed">
-                  <span className="text-slate-500">1</span> <span className="text-purple-400">const</span> <span className="text-blue-300">developer</span> = {'{'}{'\n'}
-                  <span className="text-slate-500">2</span>   name: <span className="text-emerald-300">"Muhammad Adji Prasetyo"</span>,{'\n'}
-                  <span className="text-slate-500">3</span>   role: <span className="text-emerald-300">"Web Developer"</span>,{'\n'}
-                  <span className="text-slate-500">4</span>   focus: [<span className="text-emerald-300">"Web Development"</span>,{'\n'}
-                  <span className="text-slate-500">5</span>           <span className="text-emerald-300">"ERP System"</span>,{'\n'}
-                  <span className="text-slate-500">6</span>           <span className="text-emerald-300">"Warehouse Management"</span>],{'\n'}
-                  <span className="text-slate-500">7</span>   passion: <span className="text-emerald-300">"Building impactful</span>{'\n'}
-                  <span className="text-slate-500">8</span>            <span className="text-emerald-300">digital solutions"</span>{'\n'}
-                  <span className="text-slate-500">9</span> {'}'};{'\n'}
+                <pre className="text-[10px] font-mono text-slate-300 leading-relaxed font-semibold">
+                  <span className="text-slate-600 select-none">1</span> <span className="text-pink-400">const</span> <span className="text-sky-300">developer</span> = {'{'}{'\n'}
+                  <span className="text-slate-600 select-none">2</span>   name: <span className="text-teal-300">"Muhammad Adji"</span>,{'\n'}
+                  <span className="text-slate-600 select-none">3</span>   role: <span className="text-teal-300">"Web Developer"</span>,{'\n'}
+                  <span className="text-slate-600 select-none">4</span>   focus: [<span className="text-teal-300">"Web Dev"</span>, <span className="text-teal-300">"ERP"</span>],{'\n'}
+                  <span className="text-slate-600 select-none">5</span>   passion: <span className="text-teal-300">"Impactful solutions"</span>{'\n'}
+                  <span className="text-slate-600 select-none">6</span> {'}'};{'\n'}
                 </pre>
             </motion.div>
 
-            {/* Floating Card 5: Komitmen Kualitas (Bottom Right) */}
+            {/* Floating Card 5: Komitmen Kualitas (Bottom Center / Left-ish) */}
             <motion.div 
-               animate={{ y: [0, -8, 0] }}
-               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-               className="absolute bottom-[0%] md:bottom-[5%] right-[5%] bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-2xl shadow-xl border border-white z-20 flex items-center space-x-3 md:space-x-4"
+               animate={{ y: [0, -6, 0] }}
+               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+               className="absolute bottom-[-6%] md:bottom-[-2%] right-[10%] md:right-[20%] bg-white/95 backdrop-blur-md p-3 md:p-3.5 rounded-2xl shadow-[0_15px_35px_rgba(15,23,42,0.08)] border border-slate-100/80 z-20 flex items-center space-x-3"
             >
-               <div className="relative w-8 h-8 md:w-12 md:h-12 flex items-center justify-center">
+               <div className="relative w-10 h-10 flex items-center justify-center">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                     <path className="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
-                     <path className="text-blue-500" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
+                     <circle cx="18" cy="18" r="16" fill="none" stroke="#f1f5f9" strokeWidth="3" />
+                     <circle cx="18" cy="18" r="16" fill="none" stroke="#2563eb" strokeWidth="3" strokeDasharray="100, 100" strokeLinecap="round" />
                   </svg>
+                  <span className="absolute text-xs font-bold text-blue-600">✓</span>
                </div>
                <div>
-                  <div className="text-base md:text-lg font-extrabold text-slate-800">100%</div>
-                  <div className="text-[8px] md:text-[10px] font-semibold text-slate-500">Komitmen Kualitas</div>
+                  <div className="text-sm font-black text-slate-800 leading-none">100%</div>
+                  <div className="text-[10px] font-bold text-slate-500 mt-1">Komitmen Kualitas</div>
                </div>
             </motion.div>
 
-            {/* Abstract Shapes */}
-            <div className="absolute top-[20%] left-[20%] w-8 h-8 md:w-12 md:h-12 border-2 border-blue-200 rounded-lg transform rotate-45 -z-10 animate-pulse"></div>
-            <div className="absolute bottom-[20%] right-[30%] w-6 h-6 md:w-8 md:h-8 border-2 border-purple-200 rounded-full -z-10 animate-bounce" style={{animationDuration: '3s'}}></div>
+            {/* Subtle decorative grid background for the right side canvas */}
+            <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1.2px,transparent_1.2px)] [background-size:20px_20px] opacity-40 pointer-events-none -z-10" />
           </motion.div>
         </div>
       </div>
